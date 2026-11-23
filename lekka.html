@@ -132,12 +132,12 @@
   @media (max-width:560px){.steps{grid-template-columns:1fr}}
 
   /* pricing */
-  .plans{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:stretch}
+  .plans{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:24px;align-items:stretch}
   .plan{border-radius:28px;padding:40px;display:flex;flex-direction:column}
   .plan.main{background:var(--ink);color:var(--paper)}
-  .plan.care{background:var(--paper);border:1px solid var(--line)}
+  .plan.care,.plan.lite{background:var(--paper);border:1px solid var(--line)}
   .plan h3{font-size:26px;font-variation-settings:"wdth" 90}
-  .price{font-family:var(--display);font-size:clamp(56px,7vw,88px);font-weight:700;font-variation-settings:"wdth" 75;letter-spacing:-.03em;line-height:1;margin:18px 0 6px}
+  .price{font-family:var(--display);font-size:clamp(52px,5.5vw,80px);font-weight:700;font-variation-settings:"wdth" 75;letter-spacing:-.03em;line-height:1;margin:18px 0 6px}
   .price small{font-size:22px;font-weight:500;letter-spacing:0}
   .plan .note{font-size:15px;opacity:.75;margin-bottom:26px}
   .plan ul{list-style:none;display:grid;gap:10px;margin-bottom:32px;flex:1}
@@ -145,7 +145,7 @@
   .plan li svg{flex:none;margin-top:5px}
   .plan.main .btn{background:var(--mint);color:var(--pine);border-color:var(--mint);align-self:flex-start}
   .plan.main .btn:hover{background:var(--paper);border-color:var(--paper)}
-  .plan.care .btn{align-self:flex-start}
+  .plan.care .btn,.plan.lite .btn{align-self:flex-start}
   .fine{margin-top:22px;font-size:15px;color:var(--muted)}
   @media (max-width:900px){.plans{grid-template-columns:1fr}}
 
@@ -333,12 +333,25 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="price-title">Cennik bez niespodzianek</h2>
-        <p>Jedna cena za stronę i opcjonalna opieka co miesiąc, jeśli nie chcesz się niczym zajmować.</p>
+        <p>Prosta wizytówka albo pełna strona, płatne jednorazowo. Do tego opcjonalna opieka co miesiąc, jeśli nie chcesz się niczym zajmować.</p>
       </div>
       <div class="plans">
+        <div class="plan lite">
+          <h3>Strona-wizytówka</h3>
+          <div class="price">od 499 <small>zł</small></div>
+          <p class="note">płatność jednorazowa, po akceptacji projektu</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#23412F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Jedna przejrzysta strona</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#23412F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Opis, cennik, godziny, mapa i kontakt</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#23412F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Przycisk „Zadzwoń” lub rezerwacja przez Booksy</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#23412F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Jedna runda poprawek</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#23412F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Publikacja i podpięcie do wizytówki Google</li>
+          </ul>
+          <a class="btn line" href="#kontakt">Zamów wizytówkę</a>
+        </div>
         <div class="plan main">
-          <h3>Strona dla Twojej firmy</h3>
-          <div class="price">od 900 <small>zł</small></div>
+          <h3>Pełna strona</h3>
+          <div class="price">od 899 <small>zł</small></div>
           <p class="note">płatność jednorazowa, po akceptacji projektu</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CFE3D4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Projekt dopasowany do Twojego logo i stylu</li>

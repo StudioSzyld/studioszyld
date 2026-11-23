@@ -89,12 +89,14 @@
   @media (max-width:560px){.process ol{grid-template-columns:1fr}}
 
   /* pricing */
-  .plans{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;margin-top:56px}
+  .plans{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:22px;margin-top:56px;align-items:stretch}
+  .plan{display:flex;flex-direction:column}
+  .plan ul{flex:1}
   .plan{border-radius:26px;padding:38px;backdrop-filter:blur(14px)}
   .plan.main{background:rgba(18,22,25,.92);color:#fff}
-  .plan.care{background:rgba(248,249,250,.85);border:1px solid var(--line)}
+  .plan.care,.plan.lite{background:rgba(248,249,250,.85);border:1px solid var(--line)}
   .plan h3{font-size:24px;font-variation-settings:"wdth" 90}
-  .price{font:800 clamp(64px,8vw,112px)/1 var(--display);font-variation-settings:"wdth" 75;letter-spacing:-.04em;margin:16px 0 4px}
+  .price{font:800 clamp(56px,6vw,92px)/1 var(--display);font-variation-settings:"wdth" 75;letter-spacing:-.04em;margin:16px 0 4px}
   .price small{font-size:22px;font-weight:500;letter-spacing:0}
   .plan .note{opacity:.7;font-size:15px;margin-bottom:22px}
   .plan ul{list-style:none;display:grid;gap:9px;margin-bottom:28px}
@@ -232,11 +234,18 @@
   <section class="pricing" id="cennik" data-light="#ffffff" aria-labelledby="h2c">
     <div class="wrap">
       <span class="label">Cennik</span>
-      <h2 id="h2c">Jedna cena, bez niespodzianek</h2>
+      <h2 id="h2c">Ceny bez niespodzianek</h2>
       <div class="plans">
+        <div class="plan lite">
+          <h3>Strona-wizytówka</h3>
+          <div class="price">od 499 <small>zł</small></div>
+          <p class="note">płatność jednorazowa, po akceptacji projektu</p>
+          <ul><li>Jedna przejrzysta strona</li><li>Opis, cennik, godziny, mapa i kontakt</li><li>Przycisk „Zadzwoń” lub rezerwacja przez Booksy</li><li>Jedna runda poprawek</li><li>Publikacja i podpięcie do Google</li></ul>
+          <a class="btn" href="#kontakt">Zamów wizytówkę</a>
+        </div>
         <div class="plan main">
-          <h3>Strona dla Twojej firmy</h3>
-          <div class="price">od 900 <small>zł</small></div>
+          <h3>Pełna strona</h3>
+          <div class="price">od 899 <small>zł</small></div>
           <p class="note">płatność jednorazowa, po akceptacji projektu</p>
           <ul><li>Projekt pod Twoje logo i styl</li><li>Cennik, galeria, godziny, mapa i kontakt</li><li>Rezerwacja przez Booksy lub telefon</li><li>Dwie rundy poprawek</li><li>Publikacja i podpięcie do Google</li></ul>
           <a class="btn" href="#kontakt">Zamów darmowy projekt</a>
